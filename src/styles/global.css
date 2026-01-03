@@ -88,7 +88,18 @@ p {
   margin-bottom: 1em;
 }
 .prose p {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
+}
+.prose p:has(+ ul),
+.prose p:has(+ ol) {
+  margin-bottom: 0.5em;
+}
+ul, ol {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+ul > li, ol > li {
+  margin-bottom: 0.2em;
 }
 textarea {
   width: 100%;
