@@ -30,6 +30,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Atkinson Mono";
+  src: url("/fonts/atkinson-mono.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   font-family: "Atkinson", sans-serif;
   margin: 0;
@@ -117,6 +124,8 @@ img {
   border-radius: 8px;
 }
 code {
+  font-family: "Atkinson Mono", monospace;
+  letter-spacing: -0.05em;
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
   border-radius: 2px;
