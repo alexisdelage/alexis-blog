@@ -21,9 +21,18 @@ First, accessibility targets two types of users. The first one we think about ar
 
 In France, where we have more accurate statistics, if we add other accessibility problems like color-blindness or dyslexia (that are not recognized as disabilities), the number grows up to 1/3 of the population!
 
-![Share of the different disabilities in France, for a group of 100 person: 1 is blind, 6 have visual impairment, 23 are deaf or have hearing impairments, 15 are color-blind, 30 have dyslexia, 17 have locomotor disabilities, and 23 have cognitive disabilities](./disabilities-in-france.png)
-
-Share of the different types of disabilities in France, with in order: blindness, visual impairment, deafness, color-blindness, dyslexia, locomotor disabilities and cognitive disabilities. Source: [DesignGouv](https://www.youtube.com/live/_5zIrh-LDto?feature=share)
+<figure>
+  ![Share of the different disabilities in France, for a group of 100 person: 1
+  is blind, 6 have visual impairment, 23 are deaf or have hearing impairments,
+  15 are color-blind, 30 have dyslexia, 17 have locomotor disabilities, and 23
+  have cognitive disabilities](./disabilities-in-france.png)
+  <figcaption>
+    Share of the different types of disabilities in France, with in order:
+    blindness, visual impairment, deafness, color-blindness, dyslexia, locomotor
+    disabilities and cognitive disabilities. Source:
+    [DesignGouv](https://www.youtube.com/live/_5zIrh-LDto?feature=share)
+  </figcaption>
+</figure>
 
 The second type of affected users are… everyone else! Accessibility issues can impact anyone, even those without handicaps. You can have difficulties to see color contrasts (when you use your phone in direct sunlight for example), or to listen the audio of your video in the subway… The list is very long!
 
@@ -65,12 +74,15 @@ The Accessibility Inspector comes with 3 features:
 - **The Audit Tab**: scans the screen to find common accessibility errors, like weak contrasts, missing labels, buttons that are too small, etc.
 - **The Settings Tab**: shortcuts to quickly update the accessibility settings and see the results on your app, like the _Font Size_ setting.
 
-<img
-  src={accessibilityInspectorDemo.src}
-  alt="Example of usage of the Accessibility Inspector on the Settings app"
-/>
-
-Example of usage of the _Accessibility Inspector_ on the _Settings_ app.
+<figure>
+  <img
+    src={accessibilityInspectorDemo.src}
+    alt="Example of usage of the Accessibility Inspector on the Settings app"
+  />
+  <figcaption>
+    Example of usage of the _Accessibility Inspector_ on the _Settings_ app.
+  </figcaption>
+</figure>
 
 Amazing, right? 🤩 Now, you're ready to check your app for accessibility!
 
@@ -152,7 +164,7 @@ const CheckBoxTermsAndConditions = () => {
 };
 ```
 
-And here is the result 🥳 :
+And here is the result 🥳:
 
 <img
   src={checkboxDemo.src}
