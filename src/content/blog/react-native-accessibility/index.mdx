@@ -3,7 +3,7 @@ title: "Make an Accessible App with React Native: the beginner guide"
 description: "Discover how to improve your React Native app accessibility."
 heroImage: "./accessibility-banner.png"
 pubDate: "2023-11-22"
-updatedDate: "2026-01-03"
+updatedDate: "2026-01-04"
 ---
 
 import accessibilityInspectorDemo from "./accessibility-inspector-demo.gif";
@@ -162,8 +162,7 @@ property is set to `true`.
 
 ```jsx
 <Pressable
-  // ensure this is accessible by the screen reader
-  // optional for Pressable, since default value is already true
+  // ensure this is focusable by the screen reader
   accessible
   // declare the role to "button"
   // this is mandatory for Pressable, since it has no default role
@@ -210,23 +209,13 @@ import { useState } from "react";
 import { Pressable, Text } from "react-native";
 import { CheckedBoxIcon, UncheckedBoxIcon } from "icons";
 
-const CheckBoxTermsAndConditions = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const handlePress = () => {
-    setIsLoading(true);
-    setTimeout(() => {
-      setIsChecked((checked) => !checked);
-      setIsLoading(false);
-    }, 500);
-  };
-
+const CheckBoxTermsAndConditions = ({ isChecked, isLoading, handlePress }) => {
   return (
     <Pressable
       onPress={handlePress}
       disabled={isLoading}
       accessibilityRole="checkbox"
-      accessibilityLabel="I agree to the terms and conditions of the application."
+      accessibilityLabel="I agree to the terms and conditions."
       accessibilityState={{ checked: isChecked, disabled: isLoading }}
       accessibilityValue={{ text: isLoading ? "Loading" : undefined }}
       style={{ flexDirection: "row", alignItems: "center", gap: 4, margin: 20 }}
