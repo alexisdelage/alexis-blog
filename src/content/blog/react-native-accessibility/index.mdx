@@ -1,6 +1,6 @@
 ---
 title: "Make an Accessible App with React Native: the beginner guide"
-description: "Discover the basics on developing an accessible React Native app! This guide covers the why and what of mobile accessibility, and gives you the keys to start using React Native Accessibility features."
+description: "Discover how to improve your React Native app accessibility."
 heroImage: "./accessibility-banner.png"
 pubDate: "2023-11-22"
 updatedDate: "2026-01-03"
@@ -9,17 +9,31 @@ updatedDate: "2026-01-03"
 import accessibilityInspectorDemo from "./accessibility-inspector-demo.gif";
 import checkboxDemo from "./checkbox-demo.gif";
 
-When I joined BAM, I realized on my first projects that **accessibility** was something often forgotten on **mobile apps**. In fact, taking care of your app accessibility can be quite a **challenge**, especially on mobile apps: Very few documentation exists on this topic for **React Native** developers. So it’s time to correct that!
+When I joined BAM, I realized on my first projects that **accessibility** was
+something often forgotten on **mobile apps**. In fact, taking care of your app
+accessibility can be quite a **challenge**, especially on mobile apps: Very few
+documentation exists on this topic for **React Native** developers. So it’s time
+to correct that!
 
-If you are a new React Native **developer** and are asking yourself about **accessibility**, or if you are already an expert in hooks and contexts, but you never deep dive into the subject, this article is for you!
+If you are a new React Native **developer** and are asking yourself about
+**accessibility**, or if you are already an expert in hooks and contexts, but
+you never deep dive into the subject, this article is for you!
 
 ## Why should we care about Accessibility?
 
-Let’s start with the first question about **accessibility**: why? Maybe you already know the reasons why accessibility is important, but let's recap them here.
+Let’s start with the first question about **accessibility**: why? Maybe you
+already know the reasons why accessibility is important, but let's recap them
+here.
 
-First, accessibility targets two types of users. The first one we think about are users with permanent disabilities, like blindness, deafness, and so on. It is difficult to determine the exact number of people affected, but [the ONU](https://www.who.int/health-topics/disability#tab=tab_1) estimates that it affects one person out of six in the world.
+First, accessibility targets two types of users. The first one we think about
+are users with permanent disabilities, like blindness, deafness, and so on. It
+is difficult to determine the exact number of people affected, but
+[the ONU](https://www.who.int/health-topics/disability#tab=tab_1) estimates
+that it affects one person out of six in the world.
 
-In France, where we have more accurate statistics, if we add other accessibility problems like color-blindness or dyslexia (that are not recognized as disabilities), the number grows up to 1/3 of the population!
+In France, where we have more accurate statistics, if we add other accessibility
+problems like color-blindness or dyslexia (that are not recognized as
+disabilities), the number grows up to 1/3 of the population!
 
 <figure>
   ![Share of the different disabilities in France, for a group of 100 person: 1
@@ -34,45 +48,85 @@ In France, where we have more accurate statistics, if we add other accessibility
   </figcaption>
 </figure>
 
-The second type of affected users are… everyone else! Accessibility issues can impact anyone, even those without handicaps. You can have difficulties to see color contrasts (when you use your phone in direct sunlight for example), or to listen the audio of your video in the subway… The list is very long!
+The second type of affected users are… everyone else! Accessibility issues can
+impact anyone, even those without handicaps. You can have difficulties to see
+color contrasts (when you use your phone in direct sunlight for example), or to
+listen the audio of your video in the subway… The list is very long!
 
-These situations are called **_Situational Disabilities_** : you are experiencing a disability, like visual impairment or deafness, because of the context you are in or your environment. It can happen to everyone and produces, from the point of view of an app, the same result as a regular disability.
+These situations are called **_Situational Disabilities_** : you are
+experiencing a disability, like visual impairment or deafness, because of the
+context you are in or your environment. It can happen to everyone and produces,
+from the point of view of an app, the same result as a regular disability.
 
-Last but not least, if you try to convince your boss to tackle accessibility: the **LAW** 😱. More and more countries in the world make policies to enforce companies to make their product accessible. For example, the [European Accessibility Act](https://en.wikipedia.org/wiki/European_Accessibility_Act) mandates that nearly all public digital services available in Europe must be accessible by 2025, if you didn’t hear about that.
+Last but not least, if you try to convince your boss to tackle accessibility:
+the **LAW** 😱. More and more countries in the world make policies to enforce
+companies to make their product accessible. For example, the
+[European Accessibility Act](https://en.wikipedia.org/wiki/European_Accessibility_Act)
+mandates that nearly all public digital services available in Europe must be
+accessible by 2025, if you didn’t hear about that.
 
 ## What is Accessibility for Mobile Apps?
 
-There are two main categories of accessibility issues on smartphones. The first one concerns the **_design_** or **_features_** issues. It can be, for example:
+There are two main categories of accessibility issues on smartphones. The first
+one concerns the **_design_** or **_features_** issues. It can be, for example:
 
-- Contrasts: you should check that all your contrasts meet [the AA criteria](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast);
+- Contrasts: you should check that all your contrasts meet
+  [the AA criteria](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast);
 - Colors: [information should not be conveyed by color alone](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color);
-- Texts: texts should be easily [understandable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable) and easy to read (for example, using larger spaces between lines and a sans-serif font);
-- Audio: audio content should have a written alternative (for example, subtitles and transcription on a video).
+- Texts: texts should be easily
+  [understandable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
+  and easy to read (for example, using larger spaces between lines and a
+  sans-serif font);
+- Audio: audio content should have a written alternative (for example,
+  subtitles and transcription on a video).
 
-If you wish to knew more details about this type of issues, you can check others articles to learn more about it: [The power of accessibility personas in web development](https://blog.theodo.com/2023/06/empathy-accessibility-personas/) and [Improve the accessibility of your digital product for a better user experience](https://www.bam.tech/en/article/comment-ameliorer-laccessibilite-de-votre-produit-numerique-pour-une-meilleure-experience-utilisateur).
+If you wish to knew more details about this type of issues, you can check
+others articles to learn more about it: [The power of accessibility personas in
+web development](https://blog.theodo.com/2023/06/empathy-accessibility-personas/)
+and [Improve the accessibility of your digital product for a better user
+experience](https://www.bam.tech/en/article/comment-ameliorer-laccessibilite-de-votre-produit-numerique-pour-une-meilleure-experience-utilisateur).
 
-The second category, which is more relevant for **mobile developers**, is about **_technology issues_**. These are specific accessibility features, already available in the Android and iOS systems, that your app should be able to support. Let’s focus on the 3 most important accessibility features:
+The second category, which is more relevant for **mobile developers**, is
+about **_technology issues_**. These are specific accessibility features,
+already available in the Android and iOS systems, that your app should be able
+to support. Let’s focus on the 3 most important accessibility features:
 
-- **Font Size Control**: this setting will enlarge fonts to make them more legible for people with vision loss, or for users who look at their phone from a distance (e.g., bicycle delivery drivers).
-- **Screen Reader**: it allows a user to use their device by reading the content of the screen, often used by blindness people. It is called _TalkBack_ on _Android_ and _VoiceOver_ on _iOS_.
-- **Switch Control**: it allows controlling the device with programming keys (like _Volume UP_ and _Volume DOWN_ buttons), instead of touching the screen, for people with motor disorders. It is also very useful if your screen is broken!
+- **Font Size Control**: this setting will enlarge fonts to make them more
+  legible for people with vision loss, or for users who look at their phone
+  from a distance (e.g., bicycle delivery drivers).
+- **Screen Reader**: it allows a user to use their device by reading the
+  content of the screen, often used by blindness people. It is called _TalkBack_
+  on _Android_ and _VoiceOver_ on _iOS_.
+- **Switch Control**: it allows controlling the device with programming keys
+  (like _Volume UP_ and _Volume DOWN_ buttons), instead of touching the screen,
+  for people with motor disorders. It is also very useful if your screen is
+  broken!
 
-If you want to learn how to use all these accessibility features of a phone, please check out these guides:
+If you want to learn how to use all these accessibility features of a phone,
+please check out these guides:
 
 - [_Android a11y guidelines: Manual tests_ by Orange](https://a11y-guidelines.orange.com/en/mobile/android/test/manual-testing/#screen-reader-talkback)
 - [_iOS a11y guidelines: VoiceOver_ by Orange](https://a11y-guidelines.orange.com/en/mobile/ios/voiceover/)
 
 ## How to check my App for Accessibility?
 
-Indeed, testing your app with each of this setting can be very time-consuming and boring. That’s why we have some **tools** to help us deal with accessibility!
+Indeed, testing your app with each of this setting can be very time-consuming
+and boring. That’s why we have some **tools** to help us deal with
+accessibility!
 
-Let me introduce you to your new friend, which will greatly help you during your accessibility journey: the [**Accessibility Inspector**](https://developer.apple.com/videos/play/wwdc2019/257/)! It is already installed by default with Xcode, so you can just search it with Spotlight to open it.
+Let me introduce you to your new friend, which will greatly help you during your
+accessibility journey: the [**Accessibility Inspector**](https://developer.apple.com/videos/play/wwdc2019/257/)!
+It is already installed by default with Xcode, so you can just search it with
+Spotlight to open it.
 
 The Accessibility Inspector comes with 3 features:
 
-- **The Inspection Tab**: easily tests the internal structure of your app, used for the Screen Reader and the Switch Control functionalities.
-- **The Audit Tab**: scans the screen to find common accessibility errors, like weak contrasts, missing labels, buttons that are too small, etc.
-- **The Settings Tab**: shortcuts to quickly update the accessibility settings and see the results on your app, like the _Font Size_ setting.
+- **The Inspection Tab**: easily tests the internal structure of your app, used
+  for the Screen Reader and the Switch Control functionalities.
+- **The Audit Tab**: scans the screen to find common accessibility errors, like
+  weak contrasts, missing labels, buttons that are too small, etc.
+- **The Settings Tab**: shortcuts to quickly update the accessibility settings
+  and see the results on your app, like the _Font Size_ setting.
 
 <figure>
   <img
@@ -86,15 +140,25 @@ The Accessibility Inspector comes with 3 features:
 
 Amazing, right? 🤩 Now, you're ready to check your app for accessibility!
 
-If you also want to check your app on a real device without using a simulator, you can install the [**Accessibility Scanner**](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor) for Android. It allows you to run larger audits on your app, and offers more checks and solutions in my opinion. And if your app is published, you can also find automatic analysis from the _Accessibility Scanner_ in the _Play Console_!
+If you also want to check your app on a real device without using a simulator,
+you can install the [**Accessibility Scanner**](https://play.google.com/store/apps/details?id=com.google.android.apps.accessibility.auditor)
+for Android. It allows you to run larger audits on your app, and offers more
+checks and solutions in my opinion. And if your app is published, you can also
+find automatic analysis from the _Accessibility Scanner_ in the _Play Console_!
 
 ## How does React Native support Accessibility ?
 
-Now that you’re aware of the theory and tools, let’s see how you can implement all of that in **React Native**. We will only focus on screen reader and switch control, since the other accessibility issues mainly concern the design of your app.
+Now that you’re aware of the theory and tools, let’s see how you can implement
+all of that in **React Native**. We will only focus on screen reader and switch
+control, since the other accessibility issues mainly concern the design of your
+app.
 
 ### The Accessible Components
 
-Accessible components are at the core of React Native accessibility. They are React components that can be focused by the user, and always possess a **role** and a **label**. A component is considered as **accessible** if its `accessible` property is set to `true`.
+Accessible components are at the core of React Native accessibility. They are
+React components that can be focused by the user, and always possess a **role**
+and a **label**. A component is considered as **accessible** if its `accessible`
+property is set to `true`.
 
 ```jsx
 <Pressable
@@ -112,20 +176,34 @@ Accessible components are at the core of React Native accessibility. They are Re
 </Pressable>
 ```
 
-It is worth noting that there are some limitations in React Native (the latest version is 0.72 at the time of writing):
+It is worth noting that there are some limitations in React Native (the latest
+version is 0.72 at the time of writing):
 
-- you can’t nest accessible components (e.g., a button in a clickable card or a link in a paragraph);
-- the reading sequence cannot be changed: the screen reader will read the elements in the same order as they appear in the source code.
+- you can’t nest accessible components (e.g., a button in a clickable card or a
+  link in a paragraph);
+- the reading sequence cannot be changed: the screen reader will read the
+  elements in the same order as they appear in the source code.
 
-By default, it is preferable to always add the `accessibilityRole` and `accessibilityLabel` props. Even if they have default values, you can end up with some unexpected behavior if you omit them.
+By default, it is preferable to always add the `accessibilityRole` and
+`accessibilityLabel` props. Even if they have default values, you can end up
+with some unexpected behavior if you omit them.
 
-There are also some other properties you can use to make your app more user-friendly. The most important ones are `accessibilityState` and `accessibilityValue`, which can indicate the different states of a component, for example when a button is disabled or in a loading state (check [the docs](https://reactnative.dev/docs/accessibility#accessibilitystate) for more details). There is also `accessibilityHint`, which gives more precision about what does the component when actioned (the label should remain short).
+There are also some other properties you can use to make your app more
+user-friendly. The most important ones are `accessibilityState` and
+`accessibilityValue`, which can indicate the different states of a component,
+for example when a button is disabled or in a loading state (check
+[the docs](https://reactnative.dev/docs/accessibility#accessibilitystate)
+for more details). There is also `accessibilityHint`, which gives more precision
+about what does the component when actioned (the label should remain short).
 
-Feel free to check out the [React Native documentation](https://reactnative.dev/docs/accessibility) for more properties!
+Feel free to check out the
+[React Native documentation](https://reactnative.dev/docs/accessibility)
+for more properties!
 
 ### A full example: the Checkbox
 
-Now let’s see a more complex example to sum up all what we’ve learned! Here is a simple checkbox, with a loading state, made fully accessible:
+Now let’s see a more complex example to sum up all what we’ve learned!
+Here is a simple checkbox, with a loading state, made fully accessible:
 
 ```jsx
 import { useState } from "react";
@@ -172,20 +250,41 @@ And here is the result 🥳:
   style={{ maxWidth: "500px" }}
 />
 
-So what have we done here? First, we wrap the checkbox icon and the associated label in a single **Pressable component**: this allows users with mobility issues to check or uncheck the component by pressing the label.
+So what have we done here? First, we wrap the checkbox icon and the associated
+label in a single **Pressable component**: this allows users with mobility
+issues to check or uncheck the component by pressing the label.
 
-Then, I add the **Role** of the component for screen readers, `"checkbox"`, and the **Label** that would be read in place of the checkbox label. This way, we ensure that the icon label will not be read by the screen reader, and it also allows us to use a clearer text for screen reader users.
+Then, I add the **Role** of the component for screen readers, `"checkbox"`, and
+the **Label** that would be read in place of the checkbox label. This way, we
+ensure that the icon label will not be read by the screen reader, and it also
+allows us to use a clearer text for screen reader users.
 
-Note that we did NOT indicate the word “Checkbox” in the label. This is because it will be automatically added by the screen reader using the **role** prop, so we don’t need to add it twice!
+Note that we did NOT indicate the word “Checkbox” in the label. This is because
+it will be automatically added by the screen reader using the **role** prop, so
+we don’t need to add it twice!
 
-We also did not add the prop `accessible={true}`: this is because _Pressables_, unlike **_Views_**, are already **accessible components** by default! This is useful in most cases, but can be problematic if you nest _Pressable_ components.
+We also did not add the prop `accessible={true}`: this is because _Pressables_,
+unlike **_Views_**, are already **accessible components** by default! This is
+useful in most cases, but can be problematic if you nest _Pressable_ components.
 
-Finally, we add some custom properties specific for the states. The `accessibilityState` property will indicate to the user if the checkbox is ticked or not, and the `accessibilityValue` indicates if the checkbox is loading.
+Finally, we add some custom properties specific for the states. The
+`accessibilityState` property will indicate to the user if the checkbox is
+ticked or not, and the `accessibilityValue` indicates if the checkbox is
+loading.
 
 And that’s all, we made a **fully accessible** checkbox!
 
 ## Conclusion
 
-**Accessibility** can be very tricky to deal with: there are a lot of things to check and quite a few lines of code to add! Hopefully, you can use **default components** from React Native or components libraries to avoid re-writing all your components from scratch. React Native and Android or iOS are also smart enough to add **labels** and **roles** by default, even if you did nothing, but they are still limited!
+**Accessibility** can be very tricky to deal with: there are a lot of things to
+check and quite a few lines of code to add! Hopefully, you can use **default
+components** from React Native or components libraries to avoid re-writing all
+your components from scratch. React Native and Android or iOS are also smart
+enough to add **labels** and **roles** by default, even if you did nothing, but
+they are still limited!
 
-If you are interested to learn more about accessibility, please be sure to check the [**Mobile A11Y website**](https://mobilea11y.com/) from Rob Whitaker. It contains a lot of [useful resources](https://mobilea11y.com/resources/) and some [quick wins](https://mobilea11y.com/quick-wins/) to improve your app accessibility rapidly!
+If you are interested to learn more about accessibility, please be sure to
+check the [**Mobile A11Y website**](https://mobilea11y.com/) from Rob Whitaker.
+It contains a lot of [useful resources](https://mobilea11y.com/resources/) and
+some [quick wins](https://mobilea11y.com/quick-wins/) to improve your app
+accessibility rapidly!
