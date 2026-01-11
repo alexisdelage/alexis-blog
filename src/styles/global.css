@@ -149,6 +149,18 @@ hr {
   border: none;
   border-top: 1px solid rgb(var(--gray-light));
 }
+
+sup > a[data-footnote-ref] {
+  margin-left: .2em;
+}
+section.footnotes::before {
+  display: block;
+  content: "";
+  width: 10em;
+  height: 2px;
+  background-color: black;
+  margin-top: 3em;
+}
 @media (max-width: 720px) {
   body {
     font-size: 18px;
