@@ -1,0 +1,204 @@
+---
+title: "Applications mobiles et obligation d’accessibilité : que dit la loi ?"
+description: "Petite plongée dans le monde législatif pour comprendre facilement et rapidement les différentes contraintes légales actuelles et futures sur l’accessibilité !"
+heroImage: "./law-banner.png"
+pubDate: 2024-02-08
+lang: fr
+---
+
+Qui aime aller lire les textes de lois ? Très franchement, pas moi ! Hélas, 
+c’est pourtant un passage obligé avant de publier une application, pour être 
+conforme à la législation.
+
+Dans le domaine de **l’accessibilité** des **applications mobiles**, la tâche 
+semble encore plus difficile : en France, ce sont pas moins de sept textes 
+différents pour décrire toutes les exigences ! Sans compter les textes 
+européens… Et la plupart des articles de vulgarisation se limitant aux sites 
+web, il devient compliqué de s’y retrouver !
+
+Pour démêler tout ça, je vous propose donc un petit tour complet des lois en 
+France pour **l’accessibilité des applications mobiles** ! Pour faciliter la 
+lecture, les liens vers les textes de lois seront indiqués en fin d’article.
+
+![Meme d'Obiwan Kenobi avec le texte "For people without disabilities, 
+technology makes things easier. For people with disabilities, technology 
+makes things possible."](./meme-a11y.webp)
+
+## Quelles applications sont concernées par l’obligation d’accessibilité ?
+
+Pour savoir si votre application est concernée par l’obligation, il y a en fait deux cas à distinguer.
+
+D’abord, toutes vos applications sont concernées si vous êtes :
+
+- une personne morale de droit **public**[^1] ;
+- une entreprise privée remplissant des **missions de service public** ou 
+  satisfaisant des besoins d’intérêts général[^1] ;
+- une **entreprise privée** dont le chiffre d'affaires en France dépasse 
+  **250 millions d’euros**[^1][^2] ;
+
+Si vous êtes dans un de ces cas, alors vous êtes déjà soumis à l’obligation 
+d’accessibilité depuis 2005 (ou 2019 dans le cas des entreprises privées).
+
+À noter que les applications internes à une entreprise (intranet, extranet…) 
+sont aussi concernées (cf. le [Rappel du champ d’application de la 
+DINUM](https://accessibilite.numerique.gouv.fr/obligations/champ-application/)).
+
+Pour les autres applications, il n’y a aucune obligation d’accessibilité 
+aujourd’hui. Cependant, de nouvelles règles s’appliqueront à partir du 28 juin 
+2025 pour les **produits et services**, suite à 
+l’[**Accessibility Act**](https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019L0882). 
+Les applications concernées seront[^7] :
+
+- les services de **communication électroniques** (messagerie, email…) ;
+- les services de **médias audiovisuels** (télévision, radio, plateforme de streaming…) ;
+- les applications liées à des **services de transports** (aérien, ferroviaire, métro, bus…) ;
+- les **services bancaires** ;
+- les **services de commerce** en ligne.
+
+À noter que les applications publiées avant le 28 juin 2025 auront jusqu’au 28 
+juin 2030 pour se mettre en conformité[^5]. De plus, les petites entreprises 
+employant moins de 10 personnes et avec un chiffre d’affaires inférieur à 
+2 millions d’euros seront aussi exemptées de ces obligations[^6].
+
+## Comment savoir si mon application est accessible ?
+
+Une application est considérée comme ***accessible*** (au sens légal) si elle 
+respecte **tous les critères** de la norme européenne 
+[EN 301-549 V3.2.1](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf). 
+Attention, n’ouvrez pas ce lien tout de suite ! Le document fait 186 pages, 
+alors gardez ça dans un coin en dernier recours 😉.
+
+Pour vérifier si une application respecte cette norme, le plus simple est d’utiliser le 
+[Référentiel d'évaluation de l'Accessibilité des Applications Mobiles (RAAM)](https://accessibilite.public.lu/fr/raam1/index.html),
+édité par le gouvernement du Luxembourg. Il propose une liste de 
+**107 critères de contrôle** pour vérifier si votre application est conforme, 
+avec une méthode de test pour chaque critère !
+
+Pour les plus curieux, le **RAAM** est directement inspiré du 
+[**RGAA**](https://accessibilite.numerique.gouv.fr/), son équivalent pour 
+les sites web édité par la [DINUM](https://www.numerique.gouv.fr/dinum/). 
+À savoir aussi que la norme européenne est une transcription du 
+[WCAG](https://www.w3.org/TR/WCAG21/), correspondant au niveau AA.
+
+![Hiérarchie des différentes normes. Premier niveau : le WCAG, avec ses trois 
+niveaux (simple A, double A, et triple A). Deuxième niveau : la norme européenne 
+EN-301-549, avec une liste de critères spécifiques au web et une autre liste de 
+critères spécifiques au mobile. Troisième niveau : le RGAA et le RAAM, 
+correspondant respectivement aux critères web et mobile de la norme européenne. 
+](./les-normes.png)
+
+## Quelles sont les obligations légales ?
+
+Pour les organismes (publics ou privés) déjà concernés par l’obligation d’accessibilité, des **obligations déclaratives** s’ajoutent pour prouver la bonne foi de l’organisme. Chaque application doit alors contenir :
+
+- [**La déclaration d’accessibilité**](https://accessibilite.numerique.gouv.fr/obligations/declaration-accessibilite/)[^3] :
+  elle explique la méthode de test effectuée (le RAAM donc) avec son résultat, 
+  et contient un lien vers 
+  [**le schéma pluriannuel de mise en accessibilité**](https://accessibilite.numerique.gouv.fr/obligations/schema-pluriannuel/) 
+  de l’organisme (lui aussi obligatoire[^1]). Elle doit aussi prévoir 
+  **un moyen de réclamation** pour les utilisateurs, et doit être renouvelée 
+  au minimum tous les 3 ans. Pour la rédiger, il est recommandé d’utiliser 
+  [le modèle de la DINUM](https://accessibilite.numerique.gouv.fr/obligations/declaration-accessibilite/).
+- [**La mention de l’état de conformité**](https://accessibilite.numerique.gouv.fr/obligations/mentions-et-pages-obligatoires/)[^1] :
+  cette mention indique le niveau de conformité de l’application, l’objectif 
+  étant d’atteindre **100 %** pour respecter l’obligation d’accessibilité. 
+  Elle doit normalement être affichée sur chaque page dans le cas des sites 
+  web, mais une tolérance est accordée pour les applications mobiles : la 
+  mention peut être dans un menu (à côté des liens vers les mentions légales 
+  et la déclaration d’accessibilité généralement).
+
+Pour les applications soumises à l’obligation d’accessibilité en tant que 
+*services* (donc celles concernées à partir de 2025), les contraintes sont 
+légèrement différentes. D’abord, en plus de l’obligation d’accessibilité, 
+l’application doit remplir des **obligations spécifiques** propres au type 
+de service[^10], notamment :
+
+- pour les services de communications électroniques : avoir une 
+  **transcription texte** en temps réel pour les communications vocales ;
+- pour les services de médias audiovisuels : **guides de programme** 
+  électroniques accessibles et **sous-titrage** pour les sourds ou 
+  malentendants ;
+- pour les services de transports : **informations sur l'accessibilité** 
+  du moyen de transport, accessibilité des billetteries ;
+- pour les services bancaires : accessibilité des fonctionnalités 
+  **d’identification**, de **signature électronique** et des 
+  **services de paiement** ;
+- pour les services de commerce en ligne : information sur 
+  **l’accessibilité des produits vendus**, accessibilité des 
+  fonctionnalités d’identification et de paiement.
+
+L’application doit aussi fournir une **documentation technique**, expliquant 
+comment le service satisfait les exigences d’accessibilité[^8]. Encore une 
+fois, cette documentation pourra s’appuyer sur le RAAM.
+
+![Schéma récapitulatif des obligations légales en France sur l'accessibilité 
+mobile. Pour les organismes publics et grandes entreprises (loi de 2005) : 
+mention de l'état de conformité et déclaration d'Accessibilité, avec pour cette
+dernière un moyen de réclamation pour les utilisateurs, le résultat du test 
+technique et un lien vers le schéma pluriannuel de mise en accessibilité.
+Pour les services en ligne (à partir de 2025) : documentation technique et
+obligations spécifiques par service. Dans les deux cas : obligation 
+d'accessibilité de l'app, avec 100% de conformité.](./obligations-legales.png)
+
+## Les sanctions
+
+Dans le cas des applications considérées comme des **services** (à partir de 
+2025), le manquement à une des obligations est sanctionné par une 
+**contravention de 5ᵉ classe** (soit jusqu’à 7 500 € pour une entreprise).
+
+Pour les organismes publics et les grandes entreprises, 
+l’[**ARCOM**](https://www.arcom.fr/) peut prononcer une 
+**sanction de 20 000 €** en cas de manquement aux obligations 
+**déclaratives**[^4] (déclaration d’accessibilité, schéma pluriannuel, ou 
+mention de l’état de conformité). Un délai de **3 mois** leur est toutefois 
+accordé avant de prononcer la sanction, afin de se mettre en conformité.
+
+À noter que cette dernière sanction est ramenée à 2 000 € pour les communes 
+ou groupement de communes de moins de 5 000 habitants.
+
+## Et pour les autres supports numériques ? (sites web, applis TV…)
+
+**Tous les produits numériques** sont concernés par ces lois, que ce soient des 
+sites web, des applications pour TV, des bornes de paiement, des livres audio, 
+etc.
+
+La différence principale sera surtout au niveau de la 
+**méthode technique d’évaluation** : si on a le RGAA pour les sites web et le 
+RAAM pour les applications mobiles, il n’existe pas d’équivalent pour les autres 
+produits et il faudra donc se reporter directement à la **norme européenne** 
+(ou au WCAG).
+
+Dans le cadre d’un logiciel ou d’une application, les obligations se limiteront 
+aussi aux capacités techniques du système d’exploitation hôte.
+
+## Conclusion
+
+Ça y est, vous êtes **un expert** sur les lois en accessibilité ! Enfin presque, 
+cet article a uniquement un objectif de **vulgarisation**, et n’a pas pour but 
+de remplacer une véritable expertise juridique 😁
+
+Si vous souhaitez explorer encore plus l’accessibilité numérique, n’hésitez 
+pas à aller lire ou relire cet article pour [améliorer le design de votre 
+app](https://www.bam.tech/article/comment-ameliorer-laccessibilite-de-votre-produit-numerique-pour-une-meilleure-experience-utilisateur), 
+ou encore celui-ci pour [faire des applications accessibles avec 
+React Native](https://www.bam.tech/article/make-an-accessible-app-with-react-native-the-beginner-guide) !
+
+[^1]: [Article 47 - Loi n° 2005-102 du 11 février 2005 pour l'égalité des droits et des chances, la participation et la citoyenneté des personnes handicapées](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000048050213)
+
+[^2]: [Article 2 - Décret n° 2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038956842)
+
+[^3]: [Article 6 - Décret n° 2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038956852)
+
+[^4]: [Article 8 - Décret n° 2019-768 du 24 juillet 2019 relatif à l'accessibilité aux personnes handicapées des services de communication au public en ligne](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000038956848)
+
+[^5]: [Article 16 - Loi n° 2023-171 du 9 mars 2023 portant diverses dispositions d'adaptation au droit de l'Union européenne dans les domaines de l'économie, de la santé, du travail, des transports et de l'agriculture](https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000047282795/2023-03-11)
+
+[^6]: [Article L412-13 - Code de la consommation](https://www.legifrance.gouv.fr/codes/id/LEGISCTA000047284903)
+
+[^7]: [Article D. 412-50 - Décret n° 2023-931 du 9 octobre 2023 relatif à l'accessibilité aux personnes handicapées des produits et services](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048178349)
+
+[^8]: [Article D. 412-57 - Décret n° 2023-931 du 9 octobre 2023 relatif à l'accessibilité aux personnes handicapées des produits et services](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048178349)
+
+[^9]: [Article D. 412-60 - Décret n° 2023-931 du 9 octobre 2023 relatif à l'accessibilité aux personnes handicapées des produits et services](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000048178349)
+
+[^10]: [Article 9 - Arrêté du 9 octobre 2023 fixant les exigences en matière d'accessibilité applicables aux produits et services](https://www.legifrance.gouv.fr/jorf/article_jo/JORFARTI000048178429)
