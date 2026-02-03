@@ -6,9 +6,10 @@ import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Header from "../components/Header.astro";
 
-type Props = CollectionEntry<"blog">["data"];
+type Props = CollectionEntry<"blog">["data"] & { filePath?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, lang } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, lang, filePath: filePath } = Astro.props;
+const gitHubUrl = filePath ? `https://github.com/alexisdelage/alexis-blog/commits/main/src/content/blog/${filePath}` : "";
 ---
 
 <html lang="en">
@@ -45,7 +46,7 @@ const { title, description, pubDate, updatedDate, heroImage, lang } = Astro.prop
       .title h1 {
         margin: 0 0 0.5em 0;
       }
-      .date {
+      .date, .date a {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
       }
@@ -73,7 +74,8 @@ const { title, description, pubDate, updatedDate, heroImage, lang } = Astro.prop
               {
                 updatedDate && (
                   <span>
-                    • Updated on <FormattedDate date={updatedDate} />
+                    • 
+                    <a href={gitHubUrl}>Updated on <FormattedDate date={updatedDate} /></a>
                   </span>
                 )
               }
