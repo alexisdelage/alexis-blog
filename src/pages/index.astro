@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import profilePicture from "../assets/profile-picture.jpg";
+import GwennHaDu from "../assets/gwenn-ha-du.svg";
 ---
 
 <!doctype html>
@@ -34,6 +35,14 @@ import profilePicture from "../assets/profile-picture.jpg";
         object-fit: cover;
         box-shadow: var(--box-shadow);
       }
+      .gwenn-ha-du {
+        display: inline;
+        vertical-align: text-top;
+        height: 0.9em;
+        width: 1.4em;
+        object-fit: contain;
+        border-radius: 4px;
+      }
       .hero-content {
         flex: 1;
       }
@@ -61,12 +70,13 @@ import profilePicture from "../assets/profile-picture.jpg";
         <div class="hero-content">
           <h1>Hi, I'm Alexis 👋</h1>
           <p>
-            I'm a developer passionate about accessibility and mobile 
+            I'm a developer passionate about accessibility and mobile
             development. I write about Jetpack Compose, Flutter, React Native
-            and more! Currently working at 
-            <a href="https://theodo.com">Theodo</a> from Nantes 🇫🇷. On this
-            blog, you'll find posts in English or French: feel free to
-            ask for translations if you need any!
+            and more! Currently working at
+            <a href="https://www.theodo.com/">Theodo</a> from Nantes
+            <GwennHaDu class="gwenn-ha-du" aria-label="Brittany flag" />. On
+            this blog, you'll find posts in English or French: feel free to ask
+            for translations if you need any!
           </p>
         </div>
       </div>
