@@ -124,6 +124,23 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.prose figure {
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+.prose figure p {
+  margin: 0;
+}
+.prose figure figcaption {
+  font-size: 0.875em;
+  color: rgb(var(--gray));
+  text-align: center;
+  margin-top: 0.5em;
 }
 code {
   font-family: "Atkinson Mono", monospace;
