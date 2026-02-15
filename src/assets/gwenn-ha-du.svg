@@ -1,25 +1,139 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1350 900">
-	<rect width="1350" height="900" fill="#fff"/>
-	<rect x="600" width="1350" height="100" fill="#000"/>
-	<rect x="600" y="200" width="1350" height="100" fill="#000"/>
-	<rect y="400" width="1350" height="100" fill="#000"/>
-	<rect y="600" width="1350" height="100" fill="#000"/>
-	<rect y="800" width="1350" height="100" fill="#000"/>
-	<use xlink:href="#ermine" x="-225" y="-122.5"/>
-	<use xlink:href="#ermine" x="-75" y="-122.5"/>
-	<use xlink:href="#ermine" x="75" y="-122.5"/>
-	<use xlink:href="#ermine" x="225" y="-122.5"/>
-	<use xlink:href="#ermine" x="-150"/>
-	<g id="ermine" fill="#000">
-		<use xlink:href="#s" transform="rotate(-90 300,167.5)"/>
-		<path id="s" d="M 300,167.5 l -9,-13.5 l 9,-22.5 l 9,22.5 z"/>
-		<use xlink:href="#s" transform="rotate(90 300,167.5)"/>
-		<path d="M 300,167.5 l 40.5,99 l -31.5,-13.5 l -9,18 l -9,-18 l -31.5,13.5 z"/>
-	</g>
-	<use xlink:href="#ermine" x="150"/>
-	<use xlink:href="#ermine" x="-225" y="122.5"/>
-	<use xlink:href="#ermine" x="-75" y="122.5"/>
-	<use xlink:href="#ermine" x="75" y="122.5"/>
-	<use xlink:href="#ermine" x="225" y="122.5"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1350 900"
+   version="1.1"
+   id="svg172"
+   sodipodi:docname="gwenn-ha-du.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs176" />
+  <sodipodi:namedview
+     id="namedview174"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.53555315"
+     inkscape:cx="514.4214"
+     inkscape:cy="239.00522"
+     inkscape:window-width="1463"
+     inkscape:window-height="456"
+     inkscape:window-x="0"
+     inkscape:window-y="30"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg172" />
+  <rect
+     width="1350"
+     height="900"
+     fill="#fff"
+     id="rect132" />
+  <rect
+     x="600"
+     width="750"
+     height="100"
+     fill="#000000"
+     id="rect134"
+     y="0"
+     style="stroke-width:0.745356" />
+  <rect
+     x="600"
+     y="200"
+     width="750"
+     height="100"
+     fill="#000000"
+     id="rect136"
+     style="stroke-width:0.745356" />
+  <rect
+     y="400"
+     width="1350"
+     height="100"
+     fill="#000"
+     id="rect138" />
+  <rect
+     y="600"
+     width="1350"
+     height="100"
+     fill="#000"
+     id="rect140" />
+  <rect
+     y="800"
+     width="1350"
+     height="100"
+     fill="#000"
+     id="rect142" />
+  <use
+     xlink:href="#ermine"
+     x="-225"
+     y="-122.5"
+     id="use144" />
+  <use
+     xlink:href="#ermine"
+     x="-75"
+     y="-122.5"
+     id="use146" />
+  <use
+     xlink:href="#ermine"
+     x="75"
+     y="-122.5"
+     id="use148" />
+  <use
+     xlink:href="#ermine"
+     x="225"
+     y="-122.5"
+     id="use150" />
+  <use
+     xlink:href="#ermine"
+     x="-150"
+     id="use152" />
+  <g
+     id="ermine"
+     fill="#000">
+    <use
+       xlink:href="#s"
+       transform="rotate(-90 300,167.5)"
+       id="use154" />
+    <path
+       id="s"
+       d="M 300,167.5 l -9,-13.5 l 9,-22.5 l 9,22.5 z" />
+    <use
+       xlink:href="#s"
+       transform="rotate(90 300,167.5)"
+       id="use157" />
+    <path
+       d="M 300,167.5 l 40.5,99 l -31.5,-13.5 l -9,18 l -9,-18 l -31.5,13.5 z"
+       id="path159" />
+  </g>
+  <use
+     xlink:href="#ermine"
+     x="150"
+     id="use162" />
+  <use
+     xlink:href="#ermine"
+     x="-225"
+     y="122.5"
+     id="use164" />
+  <use
+     xlink:href="#ermine"
+     x="-75"
+     y="122.5"
+     id="use166" />
+  <use
+     xlink:href="#ermine"
+     x="75"
+     y="122.5"
+     id="use168" />
+  <use
+     xlink:href="#ermine"
+     x="225"
+     y="122.5"
+     id="use170" />
 </svg>
