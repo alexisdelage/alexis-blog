@@ -6,7 +6,7 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import profilePicture from "../assets/profile-picture.jpg";
-import GwennHaDu from "../assets/gwenn-ha-du.svg";
+import gwennHaDu from "../assets/gwenn-ha-du.svg";
 ---
 
 <!doctype html>
@@ -62,9 +62,10 @@ import GwennHaDu from "../assets/gwenn-ha-du.svg";
         <div class="profile-picture">
           <Image
             src={profilePicture}
-            alt="Profile picture"
+            alt="Portrait of Alexis, a young man smiling, with short brown hair and a beard"
             width="300"
             height="300"
+            loading="eager"
           />
         </div>
         <div class="hero-content">
@@ -74,7 +75,12 @@ import GwennHaDu from "../assets/gwenn-ha-du.svg";
             development. I write about Jetpack Compose, Flutter, React Native
             and more! Currently working at
             <a href="https://www.theodo.com/">Theodo</a> from Nantes
-            <GwennHaDu class="gwenn-ha-du" aria-label="Brittany flag" />. On
+            <Image
+              src={gwennHaDu}
+              class="gwenn-ha-du"
+              alt=""
+              loading="eager"
+            />. On
             this blog, you'll find posts in English or French: feel free to ask
             for translations if you need any!
           </p>
